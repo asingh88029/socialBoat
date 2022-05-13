@@ -1,0 +1,53 @@
+.hero_section{
+    height: 60vh;
+}
+.hero_section_bg{
+    width: 100vw;
+    position: absolute;
+}
+.hero_section_content{
+    position: relative;
+    top: 0px;
+    height: 60%;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    color: #AD2929;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.hero_section_bg_mobile{
+    display: none;
+}
+
+.hero_section_bg_desktop{
+    display: block;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .hero_section_content{
+        font-size: 40px;
+        width: 90vw;
+        margin-top: 30px;
+    }
+    .hero_section_bg_mobile{
+        display: block;
+    }
+
+    .hero_section_bg_desktop{
+        display: none;
+    }
+
+    .hero_section{
+        height: 40vh;
+    }
+  }

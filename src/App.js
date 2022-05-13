@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Navbar from './Components/Navbar'
+import Hero_Section from './Components/Hero_Section'
+import Card_Section from './Components/Card_Section'
 
-function App() {
+const App = () => {
+  // Storing search result of user
+  const [query, setQuery] = useState("fitness")
+  //Function to set query states via its children
+  function search_input(data){
+    setQuery(data);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{background:"#171717"}}>
+      <Navbar search_input={search_input}></Navbar>
+      <Hero_Section></Hero_Section>
+      <Card_Section search_query={query}></Card_Section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

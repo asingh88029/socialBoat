@@ -1,0 +1,49 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000;
+}
+.company_name{
+    font-weight: 800;
+font-size: 32px;
+line-height: 39px;
+color: #FFFFFF;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar_name{
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+padding: 0px 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        display: block;
+    }
+
+    .profile{
+        position: absolute;
+        top: 8px;
+        right: 0px;
+    }
+    .company_name{
+        font-size: 24px;
+        line-height: 10px;
+    }
+}
